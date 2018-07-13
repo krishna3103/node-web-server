@@ -44,7 +44,7 @@ app.use((req,res,next) => {
 
 
 app.get('/', (req, res) => {
-	res.render('home.hbs', {
+	res.render('home', {
 		name : 'Krishna',
 		age : 29,
 		hobby : 'Cricket',
@@ -53,8 +53,14 @@ app.get('/', (req, res) => {
 });
 
 app.get('/about', (req,res) => {
-	res.render('about.hbs', {
+	res.render('about', {
 		pageTitle : 'About Page'
+	});
+});
+
+app.get('/testimonial', (req,res) => {
+	res.render('testimonial', {
+		pageTitle : 'Testimonal Page'
 	});
 });
 
